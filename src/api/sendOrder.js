@@ -1,7 +1,8 @@
+import {localhost} from './ipAddress';
 const sendOrder = (token, arrayDetail) => {
   const data = {token, arrayDetail};
   console.log(data);
-  return fetch('http://10.0.134.146/api/cart.php', {
+  return fetch(`http://${localhost}/api/cart.php`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

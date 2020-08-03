@@ -1,5 +1,6 @@
+import {localhost} from './ipAddress';
 const getOrderHistory = token =>
-  fetch('http://10.0.134.146/api/order_history.php', {
+  fetch(`http://${localhost}/api/order_history.php`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

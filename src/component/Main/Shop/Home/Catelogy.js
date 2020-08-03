@@ -8,7 +8,8 @@ import {
   ImageBackground,
   TouchableOpacity,
 } from 'react-native';
-const url = 'http://10.0.134.146/api/images/type/';
+import {localhost} from '../../../../api/ipAddress';
+const url = `http://${localhost}/api/images/type/`;
 import Swiper from 'react-native-swiper';
 const {height, width} = Dimensions.get('window');
 export default class Catelogy extends Component {
@@ -25,11 +26,7 @@ export default class Catelogy extends Component {
       <Swiper showsPagination width={imageWidth} height={imageHeight}>
         {types.map(e => (
           <TouchableOpacity onPress={() => this.gotoListProduct(e)} key={e.id}>
-            <ImageBackground
-              source={{uri: `${url}${e.image}`}}
-              style={imageStyle}>
-              <Text style={cateTitle}>{e.name}</Text>
-            </ImageBackground>
+            <Image source={{uri: `${url}${e.image}`}} style={imageStyle} />
           </TouchableOpacity>
         ))}
       </Swiper>

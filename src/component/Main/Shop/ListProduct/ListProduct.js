@@ -9,11 +9,12 @@ import {
   RefreshControl,
   FlatList,
 } from 'react-native';
+import {localhost} from '../../../../api/ipAddress';
 import getListProduct from '../../../../api/getListProduct';
 
 import backList from '../../../../media/appIcon/backList.png';
 
-const url = 'http://10.0.134.146/api/images/product/';
+const url = `http://${localhost}/api/images/product/`;
 function toTitleCase(str) {
   return str.replace(
     /\w\S*/g,

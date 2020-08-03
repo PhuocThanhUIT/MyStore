@@ -1,5 +1,6 @@
+import {localhost} from './ipAddress';
 const changeInfo = (token, name, address, phone) =>
-  fetch(`http://10.0.134.146/api/change_info.php`, {
+  fetch(`http://${localhost}/api/change_info.php`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

@@ -10,8 +10,9 @@ import {
   FlatList,
   ImageBackground,
 } from 'react-native';
+import {localhost} from '../../../../api/ipAddress';
 //import {ListView} from 'deprecated-react-native-listview';
-const url = 'http://10.0.134.146/api/images/product/';
+const url = `http://${localhost}/api/images/product/`;
 
 export default class TopProduct extends Component {
   constructor(props) {

@@ -1,5 +1,6 @@
+import {localhost} from './ipAddress';
 const signIn = (email, password) =>
-  fetch('http://10.0.134.146/api/login.php', {
+  fetch(`http://${localhost}/api/login.php`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

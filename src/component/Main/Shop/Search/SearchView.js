@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import global from '../../../global';
 
-const url = 'http://10.0.134.146/api/images/product/';
+const url = 'http://192.168.43.242/api/images/product/';
 
 function toTitleCase(str) {
   return str.replace(

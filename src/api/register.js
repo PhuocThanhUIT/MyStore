@@ -1,5 +1,6 @@
+import {localhost} from './ipAddress';
 const register = (email, name, password) =>
-  fetch('http://10.0.134.146/api/register.php', {
+  fetch(`http://${localhost}/api/register.php`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

@@ -12,14 +12,14 @@ import {
 import global from '../../../global';
 import sendOrder from '../../../../api/sendOrder';
 import getToken from '../../../../api/getToken';
-
+import {localhost} from '../../../../api/ipAddress';
 function toTitleCase(str) {
   return str.replace(
     /\w\S*/g,
     txt => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase(),
   );
 }
-const url = 'http://10.0.134.146/api/images/product/';
+const url = `http://${localhost}/api/images/product/`;
 class Cart extends Component {
   constructor(props) {
     super(props);

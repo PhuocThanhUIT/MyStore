@@ -9,11 +9,11 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import global from '../../../global';
-
+import {localhost} from '../../../../api/ipAddress';
 const back = require('../../../../media/appIcon/back.png');
 const cart = require('../../../../media/appIcon/cartfull.png');
 
-const url = 'http://10.0.134.146/api/images/product/';
+const url = `http://${localhost}/api/images/product/`;
 
 export default class ProductDetail extends Component {
   constructor(props) {

@@ -9,8 +9,8 @@ import {
   FlatList,
 } from 'react-native';
 import global from '../../../global';
-
-const url = 'http://10.0.134.146/api/images/product/';
+import {localhost} from '../../../../api/ipAddress';
+const url = `http://${localhost}/api/images/product/`;
 function toTitleCase(str) {
   return str.replace(
     /\w\S*/g,

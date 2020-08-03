@@ -1,5 +1,6 @@
+import {localhost} from './ipAddress';
 const checkLogin = token =>
-  fetch(`http://10.0.134.146/api/check_login.php`, {
+  fetch(`http://${localhost}/api/check_login.php`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

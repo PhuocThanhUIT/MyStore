@@ -1,8 +1,8 @@
 import saveToken from './saveToken';
 import getToken from './getToken';
-
+import {localhost} from './ipAddress';
 const getNewToken = token =>
-  fetch('http://10.0.134.146/api/refresh_token.php', {
+  fetch(`http://${localhost}/api/refresh_token.php`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
